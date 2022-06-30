@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#161F28"
+    android:background="#030f22"
     tools:context=".create_team.NamaTimFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -93,13 +93,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#1B2835"
                 android:inputType="none"
                 android:text="Pilih Game"
                 android:textColor="#FFFFFF"
-                android:textColorHint="#99FFFFFF"
                 android:textSize="15dp"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:textColorHint="#99FFFFFF"
+                android:backgroundTint="#041C32"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -292,15 +291,14 @@
         android:id="@+id/btnUploadLogo"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="18dp"
+        android:padding="15dp"
         android:layout_marginTop="5dp"
+        android:layout_marginLeft="18dp"
         android:background="@drawable/btn_top"
         android:drawableLeft="@drawable/ic_upload"
-        android:padding="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textKetUploadLogo"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@id/textKetUploadLogo" />
 
 
     <EditText
@@ -330,8 +328,7 @@
         android:textColor="#206AB5"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

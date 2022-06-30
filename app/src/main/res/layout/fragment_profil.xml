@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#161F28"
+    android:background="#030f22"
     android:padding="18dp"
     tools:context="com.example.tugasproyek.fragments.ProfilFragment">
 
@@ -44,7 +44,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#161F28"
+                    android:background="#030f22"
                     android:orientation="horizontal">
 
 
@@ -55,38 +55,28 @@
                         android:src="@drawable/ic_camera" />
 
                     <LinearLayout
-                        android:layout_width="266dp"
-                        android:layout_height="197dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_margin="5dp"
                         android:orientation="vertical">
 
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Soeharto"
+                            android:textColor="#fff"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
 
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/namaUser"
-                                android:layout_width="match_parent"
-                                android:layout_height="30dp"
-                                android:drawablePadding="2dp"
-                                tools:ignore="SpeakableTextPresentCheck"
-                                android:background="@color/white"/>
-                        </com.google.android.material.textfield.TextInputLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="pada hari minggu ku turut ayah ke kota pada hari minggu ku turut ayah ke kota pada hari minggu ku turut ayah ke kotapada hari minggu ku turut ayah ke kota"
+                            android:textColor="#fff"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
 
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/noHp"
-                                android:layout_width="match_parent"
-                                android:layout_height="30dp"
-                                android:drawablePadding="2dp"
-                                tools:ignore="SpeakableTextPresentCheck"
-                                android:background="@color/white"/>
-                        </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
-
 
 
                 </LinearLayout>
@@ -117,7 +107,7 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#161F28"
+                    android:background="#030f22"
                     android:orientation="horizontal">
 
                     <ImageView

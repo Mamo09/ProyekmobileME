@@ -6,7 +6,7 @@
     android:focusableInTouchMode="true"
     android:focusable="true"
     tools:context="com.example.tugasproyek.fragments.TurnamenFragment"
-    android:background="#161F28">
+    android:background="#030f22">
 
     <!-- TODO: Update blank fragment layout -->
 

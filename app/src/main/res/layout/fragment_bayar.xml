@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#161F28"
+    android:background="#030f22"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".join_turnamen.BayarFragment">
 
@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1. Tim  "
-            android:background="@drawable/stroke"
+            android:background="@drawable/btn_def"
             android:padding="15dp"
             android:layout_margin="10dp"
 
@@ -71,7 +71,7 @@
             android:text="3. Selesai"
             android:padding="15dp"
             android:layout_margin="10dp"
-            android:background="@drawable/stroke"
+            android:background="@drawable/btn_def"
             android:textColor="@color/white" />
 
 

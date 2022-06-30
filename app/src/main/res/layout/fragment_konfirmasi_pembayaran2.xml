@@ -31,9 +31,8 @@
         app:cardUseCompatPadding="true"
         android:layout_marginLeft="18dp"
         android:layout_marginRight="18dp"
-
         app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="#1B2835"
+        app:cardBackgroundColor="#041C32"
         app:layout_constraintTop_toBottomOf="@+id/textKonfirmasiPembayaran">
 
 
@@ -92,15 +91,15 @@
                 android:id="@+id/peringatan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="5dp"
-                app:cardUseCompatPadding="true"
-                app:cardBackgroundColor="#111820"
+                android:layout_below="@+id/tglPemesanan"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/tglPemesanan">
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                app:cardBackgroundColor="#041C32"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -110,17 +109,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Peringatan"
                         android:layout_gravity="center_horizontal"
-                        android:textColor="#FA4E4E"/>
+                        android:text="Peringatan"
+                        android:textColor="#FA4E4E" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Untuk Pembayaran Menggunakan QRIS, Harap Scan Barcode Menggunakan Aplikasi Yang Support QRIS"
                         android:layout_gravity=""
                         android:padding="10dp"
-                        android:textColor="#FFFFFF"/>
+                        android:text="Untuk Pembayaran Menggunakan QRIS, Harap Scan Barcode Menggunakan Aplikasi Yang Support QRIS"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
@@ -151,12 +150,12 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/ovo"
-                android:background="#18212B"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="18dp"
+                android:layout_below="@id/qrcode"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@id/qrcode"/>
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:background="#041C32"
+                android:src="@drawable/ovo" />
 
             <TextView
                 android:id="@+id/namapembayar"

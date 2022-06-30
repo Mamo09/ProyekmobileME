@@ -39,7 +39,6 @@ class OverviewDetailTurnamenFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_overview_detail_turnamen, container, false)
-
         view.btnBergabung.setOnClickListener {
             startActivity(Intent(activity,JoinTurnamen::class.java))
         }

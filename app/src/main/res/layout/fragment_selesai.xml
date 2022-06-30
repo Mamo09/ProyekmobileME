@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#161F28"
+    android:background="#030f22"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".join_turnamen.SelesaiFragment">
 
@@ -50,7 +50,7 @@
             android:text="1. Tim  "
             android:padding="15dp"
             android:layout_margin="10dp"
-            android:background="@drawable/stroke"
+            android:background="@drawable/btn_def"
             android:textColor="@color/white" />
         <TextView
             android:id="@+id/movePemain2"
@@ -59,7 +59,7 @@
             android:text="2. Bayar"
             android:padding="15dp"
             android:layout_margin="10dp"
-            android:background="@drawable/stroke"
+            android:background="@drawable/btn_def"
             android:textColor="@color/white" />
         <TextView
             android:id="@+id/movePemain3"
@@ -100,7 +100,7 @@
         android:layout_marginRight="18dp"
 
         app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="#1B2835"
+        app:cardBackgroundColor="#041C32"
         app:layout_constraintTop_toBottomOf="@+id/textKonfirmasiPembayaran">
 
 
@@ -159,15 +159,15 @@
                 android:id="@+id/peringatan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="5dp"
-                app:cardUseCompatPadding="true"
-                app:cardBackgroundColor="#111820"
+                android:layout_below="@+id/tglPemesanan"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/tglPemesanan">
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                app:cardBackgroundColor="#041C32"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -178,16 +178,15 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center_horizontal"
-                        android:background="@drawable/ic_check"/>
+                        android:background="@drawable/ic_check" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Transaksi ini sudah dilakukan pada 12 desember 1945 pukul 13.13 WIN"
                         android:layout_gravity="center_horizontal"
-                        android:textColor="#20D067"
-                        android:padding="10dp"/>
-
+                        android:padding="10dp"
+                        android:text="Transaksi ini sudah dilakukan pada 12 desember 1945 pukul 13.13 WIN"
+                        android:textColor="#20D067" />
 
 
                 </LinearLayout>
@@ -219,12 +218,12 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/ovo"
-                android:background="#18212B"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="18dp"
+                android:layout_below="@id/qrcode"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@id/qrcode"/>
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:background="#041C32"
+                android:src="@drawable/ovo" />
 
             <TextView
                 android:id="@+id/namapembayar"
