@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="18dp"
                 android:paddingTop="20dp"
-                android:text="Daftar Pemain"
+                android:text="Input Data Pemain"
                 android:textColor="#CCFFFFFF"
                 android:textSize="24dp"
                 android:textStyle="bold"
