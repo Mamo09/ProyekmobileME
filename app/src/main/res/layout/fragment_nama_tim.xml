@@ -93,12 +93,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="#041C32"
                 android:inputType="none"
                 android:text="Pilih Game"
                 android:textColor="#FFFFFF"
-                android:textSize="15dp"
                 android:textColorHint="#99FFFFFF"
-                android:backgroundTint="#041C32"/>
+                android:textSize="15dp"
+                tools:ignore="TouchTargetSizeCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -291,14 +292,15 @@
         android:id="@+id/btnUploadLogo"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:padding="15dp"
-        android:layout_marginTop="5dp"
         android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/btn_top"
         android:drawableLeft="@drawable/ic_upload"
+        android:padding="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textKetUploadLogo" />
+        app:layout_constraintTop_toBottomOf="@id/textKetUploadLogo"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
     <EditText
@@ -328,7 +330,8 @@
         android:textColor="#206AB5"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
