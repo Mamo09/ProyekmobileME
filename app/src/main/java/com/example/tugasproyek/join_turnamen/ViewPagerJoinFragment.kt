@@ -5,8 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.tugasproyek.R
-import kotlinx.android.synthetic.main.fragment_view_pager_join.view.*
+import com.example.tugasproyek.databinding.FragmentViewPagerJoinBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,6 +18,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class ViewPagerJoinFragment : Fragment() {
+    private lateinit var _binding: FragmentViewPagerJoinBinding
+    private val binding get() = _binding
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -36,7 +37,8 @@ class ViewPagerJoinFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_view_pager_join, container, false)
+        _binding =  FragmentViewPagerJoinBinding.inflate(inflater, container, false)
+        val view = binding.root
         val fragmentList = arrayListOf<Fragment>(
             TimFragment(),
             BayarFragment(),
@@ -44,9 +46,9 @@ class ViewPagerJoinFragment : Fragment() {
         )
 
         val adapter = JoinTurnamenViewPagerAdapter(fragmentList,requireActivity().supportFragmentManager,lifecycle)
-        view.joinTurnamenViewPager.adapter = adapter
+        binding.joinTurnamenViewPager.adapter = adapter
 
-        view.joinTurnamenViewPager.isUserInputEnabled = false
+        binding.joinTurnamenViewPager.isUserInputEnabled = false
         return view
     }
 
