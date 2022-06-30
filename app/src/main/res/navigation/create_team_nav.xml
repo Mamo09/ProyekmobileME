@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_team_nav"
+    app:startDestination="@id/viewPagerFragment">
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.tugasproyek.create_team.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <activity
+        android:id="@+id/home2"
+        android:name="com.example.tugasproyek.Home"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+</navigation>

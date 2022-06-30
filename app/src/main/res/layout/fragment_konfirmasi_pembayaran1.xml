@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="#030f22"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".join_turnamen.KonfirmasiPembayaran1Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textNamaPembayar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pembayar"
+        android:textColor="#CCFFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#B3FF0000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="2dp"
+        app:layout_constraintLeft_toRightOf="@+id/textNamaPembayar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/inputNamaPembayar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edittext"
+        android:hint="Nama Pembayar"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:textColorHint="#99FFFFFF"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="18dp"
+        android:textCursorDrawable="@drawable/cursor"
+        android:layout_marginRight="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/textNamaPembayar"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <TextView
+        android:id="@+id/textKonfirmasiPembayaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Metode Pembayaran"
+        android:textColor="#CCFFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputNamaPembayar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#B3FF0000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="2dp"
+        app:layout_constraintLeft_toRightOf="@+id/textKonfirmasiPembayaran"
+        app:layout_constraintTop_toBottomOf="@id/inputNamaPembayar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMetodePembayaran"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginTop="10dp"
+        app:cardUseCompatPadding="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#1B2835"
+        app:layout_constraintTop_toBottomOf="@+id/textKonfirmasiPembayaran">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/metode1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="#111820">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/asdasd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:id="@+id/atmbersama"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/atmbersama"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp. 69.420"
+                        android:textColor="@color/white"
+
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/metode2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="1dp"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="#111820"
+                android:layout_below="@id/metode1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/asdassd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:id="@+id/atmovo"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ovo"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp. 69.420"
+                        android:textColor="@color/white"
+
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/metode3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="1dp"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="#111820"
+                android:layout_below="@id/metode2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/asdasds"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:id="@+id/atmgopay"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dana"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp. 69.420"
+                        android:textColor="@color/white"
+
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardMetodePembayaran">
+
+        <TextView
+            android:id="@+id/movePembayaran1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:padding="5dp"
+            android:background="#206AB5"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/movePembayaran2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:padding="5dp"
+            android:background="@drawable/stroke"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

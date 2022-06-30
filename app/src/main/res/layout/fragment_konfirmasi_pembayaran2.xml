@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#030f22"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".join_turnamen.KonfirmasiPembayaran2Fragment">
+
+
+    <TextView
+        android:id="@+id/textKonfirmasiPembayaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="18dp"
+        android:paddingTop="20dp"
+        android:text="Konfirmasi Pembayaran"
+        android:textColor="#CCFFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMetodePembayaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardUseCompatPadding="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#1B2835"
+        app:layout_constraintTop_toBottomOf="@+id/textKonfirmasiPembayaran">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/kodePesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kode Pesanan: 124354222"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:textSize="10dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/tglPemesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Pemesanan: 17-08-1945"
+                android:paddingLeft="20dp"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_below="@id/kodePesanan"/>
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/belumBayar"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:text="Status"
+                android:background="@drawable/corner_status_bg"
+                android:textSize="10dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/belumBayar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp"
+                android:text="Belum Bayar"
+                android:background="@drawable/corner_belum_bayar_bg"
+                android:textSize="10dp"
+                android:textColor="@color/white" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/peringatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="#111820"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tglPemesanan">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Peringatan"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#FA4E4E"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Untuk Pembayaran Menggunakan QRIS, Harap Scan Barcode Menggunakan Aplikasi Yang Support QRIS"
+                        android:layout_gravity=""
+                        android:padding="10dp"
+                        android:textColor="#FFFFFF"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/scanbarcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#99FFFFFF"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="10dp"
+                android:layout_alignParentLeft="true"
+                android:text="Scan Barcode\nDi bawah ini"
+                android:layout_below="@id/peringatan"/>
+
+            <ImageView
+                android:id="@+id/qrcode"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/qrcode"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="18dp"
+                android:layout_below="@id/scanbarcode"/>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ovo"
+                android:background="#18212B"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/qrcode"/>
+
+            <TextView
+                android:id="@+id/namapembayar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Pembayar"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@id/scanbarcode"
+                android:layout_toRightOf="@id/scanbarcode"
+                android:textColor="#99FFFFFF"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/mikroskil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mikroskil Esports"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@id/namapembayar"
+                android:layout_toRightOf="@id/scanbarcode"
+                android:textColor="@color/white"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/bataspembayaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Batas Pembayaran"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:layout_below="@id/mikroskil"
+                android:layout_toRightOf="@id/scanbarcode"
+                android:textColor="#99FFFFFF"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 Desember 1945\n23.59 WIB"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@id/bataspembayaran"
+                android:layout_toRightOf="@id/scanbarcode"
+                android:textColor="#CA0303"
+                android:textSize="14dp"/>
+
+            <View style="@style/Divider.Vertical"
+                android:layout_height="100dp"
+                android:id="@+id/viewDivider"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="40dp"
+                android:background="@color/white"
+                android:layout_below="@id/peringatan"
+                android:layout_toRightOf="@id/namapembayar"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/peringatan"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="10dp"
+                android:text=" Biaya: Rp 68.420\n Admin: Rp 1000\n_______________\nTotal: Rp 69.420"
+                android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardMetodePembayaran">
+
+        <TextView
+            android:id="@+id/movePembayaran1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:padding="5dp"
+            android:background="@drawable/stroke"
+
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/movePembayaran2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:padding="5dp"
+            android:background="#206AB5"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

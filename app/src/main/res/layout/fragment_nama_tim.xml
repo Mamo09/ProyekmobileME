@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161F28"
+    tools:context=".create_team.NamaTimFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/judulBuatTim"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="18dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="10dp"
+        android:text="Buat Tim"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:gravity="left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View style="@style/Divider.Horizontal"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:id="@+id/viewDivider"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/judulBuatTim"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/textPilihGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Game"
+        android:textColor="#CCFFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewDivider" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#B3FF0000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="2dp"
+        app:layout_constraintLeft_toRightOf="@+id/textPilihGame"
+        app:layout_constraintTop_toBottomOf="@+id/viewDivider" />
+
+    <TextView
+        android:id="@+id/textKetPilihGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silahkan pilih game sesuai daftar yang tersedia"
+        android:textColor="#CCFFFFFF"
+        android:textSize="11dp"
+        android:paddingLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPilihGame" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pilihGameTim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textKetPilihGame"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_edittext"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#1B2835"
+                android:inputType="none"
+                android:text="Pilih Game"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#99FFFFFF"
+                android:textSize="15dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/textNamaPembayar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Tim"
+        android:textColor="#CCFFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pilihGameTim" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#B3FF0000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="2dp"
+        app:layout_constraintLeft_toRightOf="@+id/textNamaPembayar"
+        app:layout_constraintTop_toBottomOf="@+id/pilihGameTim" />
+
+    <TextView
+        android:id="@+id/textKetNamaTim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tidak boleh mengandung unsur dewasa atau SARA."
+        android:textColor="#CCFFFFFF"
+        android:textSize="11dp"
+        android:paddingLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNamaPembayar" />
+    <EditText
+        android:id="@+id/inputNamaPembayar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edittext"
+        android:hint="Nama Tim"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:textColorHint="#99FFFFFF"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="18dp"
+        android:textCursorDrawable="@drawable/cursor"
+        android:layout_marginRight="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/textKetNamaTim"
+        tools:layout_editor_absoluteX="18dp" />
+
+
+    <TextView
+        android:id="@+id/textNomorWA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nomor WhatsApp Leader"
+        android:textColor="#CCFFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNamaPembayar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#B3FF0000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="2dp"
+        app:layout_constraintLeft_toRightOf="@+id/textNomorWA"
+        app:layout_constraintTop_toBottomOf="@+id/inputNamaPembayar" />
+
+    <TextView
+        android:id="@+id/textKetNomorWA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='Diawali dengan angka \"0\" dan tidak memakai awalan "+62" atau tanda pemisah "-"'
+        android:textColor="#CCFFFFFF"
+        android:textSize="11dp"
+        android:paddingLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNomorWA" />
+
+    <EditText
+        android:id="@+id/inputWhatsApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edittext"
+        android:hint="Nomor WhatsApp"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:textColorHint="#99FFFFFF"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="18dp"
+        android:textCursorDrawable="@drawable/cursor"
+        android:layout_marginRight="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/textKetNomorWA"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <TextView
+        android:id="@+id/textEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="#CCFFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputWhatsApp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#B3FF0000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="2dp"
+        app:layout_constraintLeft_toRightOf="@+id/textEmail"
+        app:layout_constraintTop_toBottomOf="@+id/inputWhatsApp" />
+
+    <TextView
+        android:id="@+id/textKetEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='E-Certificate akan dikirim ke e-mail tersebut.'
+        android:textColor="#CCFFFFFF"
+        android:textSize="11dp"
+        android:paddingLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEmail" />
+
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edittext"
+        android:hint="Email"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:textColorHint="#99FFFFFF"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="18dp"
+        android:textCursorDrawable="@drawable/cursor"
+        android:layout_marginRight="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/textKetEmail"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <TextView
+        android:id="@+id/textUploadLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Logo"
+        android:textColor="#CCFFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+
+    <TextView
+        android:id="@+id/textKetUploadLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='Silahkan Upload Logo (lewati jika belum memiliki logo)'
+        android:textColor="#CCFFFFFF"
+        android:textSize="11dp"
+        android:paddingLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textUploadLogo" />
+
+
+    <Button
+        android:id="@+id/btnUploadLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_top"
+        android:drawableLeft="@drawable/ic_upload"
+        android:padding="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textKetUploadLogo"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <EditText
+        android:id="@+id/inputLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/custom_edittext"
+        android:hint="Upload Logo (jpg,png,tiff)"
+        android:editable="false"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="#99FFFFFF"
+        android:textCursorDrawable="@drawable/cursor"
+        app:layout_constraintLeft_toRightOf="@id/btnUploadLogo"
+        app:layout_constraintTop_toBottomOf="@+id/textKetUploadLogo" />
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        android:clickable="true"
+        android:text="Selanjutnya"
+        android:textColor="#206AB5"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

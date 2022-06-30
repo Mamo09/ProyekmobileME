@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    app:cardBackgroundColor="#030f22"
+    app:cardCornerRadius="10dp"
+    android:padding="5dp"
+    android:layout_marginBottom="5dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/item_gambar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rubytournament"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/item_kategori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile Legends"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/item_gambar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textSize="13dp"
+            android:padding="5dp"
+            android:background="@drawable/corner_kategori"
+            android:textColor="#212529"
+            />
+
+        <TextView
+            android:id="@+id/item_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/item_kategori"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Contoh Judul Contoh Jua"
+            android:textSize="24dp"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/item_judul"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="15dp"
+            android:text="Biaya Pendaftaran : "
+            android:textSize="15dp"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/item_biaya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/item_judul"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="15dp"
+            android:text="Rp10.000"
+            android:textSize="15dp"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textview2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="5dp"
+            android:text="Mulai Turnamen : "
+            android:textSize="15dp"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/item_tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/item_biaya"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="5dp"
+            android:text="17 Agustus 1945"
+            android:textSize="15dp"
+            android:textColor="#fff"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

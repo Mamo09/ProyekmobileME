@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tugasproyek">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon1"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon1"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TugasProyek">
+        <receiver
+            android:name=".WidgetME"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_m_e_info" />
+        </receiver>
+<!--        <receiver-->
+<!--            android:name=".myWidget"-->
+<!--            android:exported="false">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />-->
+<!--                <action android:name="android.appwidget.action.APPWIDGET_DISABLE" />-->
+<!--                <action android:name="android.appwidget.action.APPWIDGET_ENABLE" />-->
+<!--            </intent-filter>-->
+
+<!--            <meta-data-->
+<!--                android:name="android.appwidget.provider"-->
+<!--                android:resource="@xml/my_widget_info" />-->
+<!--        </receiver>-->
+
+        <activity
+            android:name=".NamaPemain"
+            android:exported="false" />
+        <activity
+            android:name=".schedule"
+            android:exported="true" />
+        <activity android:name=".JoinTurnamen" />
+        <activity android:name=".join_turnamen.JoinTurnamenActivity" />
+        <activity android:name=".CreateTeam" />
+        <activity android:name=".Bracket" />
+        <activity android:name=".Register" />
+        <activity android:name=".Login" />
+        <activity
+            android:name=".Home"
+            android:label="Home"
+            android:parentActivityName=".Login" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

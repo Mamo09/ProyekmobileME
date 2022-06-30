@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161F28"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".join_turnamen.TimFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textRegistrasiTurnamen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="18dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="10dp"
+        android:text="REGISTRASI TURNAMEN"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:gravity="left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View style="@style/Divider.Horizontal"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:id="@+id/viewDivider"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/textRegistrasiTurnamen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <LinearLayout
+        android:id="@+id/posTim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textRegistrasiTurnamen">
+
+        <TextView
+            android:id="@+id/movePemain1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Tim  "
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:background="#206AB5"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/movePemain2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Bayar"
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/stroke"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/movePemain3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Selesai"
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/stroke"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textPilihTim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Tim"
+        android:textColor="#CCFFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/posTim" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#B3FF0000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingLeft="2dp"
+        app:layout_constraintLeft_toRightOf="@+id/textPilihTim"
+        app:layout_constraintTop_toBottomOf="@+id/posTim" />
+
+    <TextView
+        android:id="@+id/textKetPilihTim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silahkan pilih tim yang tersedia"
+        android:textColor="#CCFFFFFF"
+        android:textSize="11dp"
+        android:paddingLeft="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPilihTim" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pilihTim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textKetPilihTim"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none"
+                android:text="Pilih Tim"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:textColorHint="#99FFFFFF"
+                android:backgroundTint="#1B2835"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        android:clickable="true"
+        android:text="Selanjutnya"
+        android:textColor="#206AB5"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

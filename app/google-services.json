@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "856905879831",
+    "project_id": "mikroskil-esport",
+    "storage_bucket": "mikroskil-esport.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856905879831:android:4ed6966b3f38f031f52752",
+        "android_client_info": {
+          "package_name": "com.example.tugasproyek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856905879831-dv4hom47bhnkmpbaidn58u12rfk3kolr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5288JpAQYA749ZfktHmC7IcBdDUGU8iA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856905879831-dv4hom47bhnkmpbaidn58u12rfk3kolr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

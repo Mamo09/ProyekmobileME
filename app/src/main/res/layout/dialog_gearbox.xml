@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="350dp"
+    android:layout_height="300dp"
+    app:cardBackgroundColor="@color/colorAccent"
+    android:layout_gravity="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0000"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textGearBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Gear Box"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/day1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day 1"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#5B636363"
+            android:textColor="@color/white"
+            android:drawableBottom="@drawable/ic_giftcard"
+            app:layout_constraintRight_toLeftOf="@id/day2"
+            app:layout_constraintTop_toBottomOf="@id/textGearBox"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/day2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day 2"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            app:layout_constraintRight_toLeftOf="@id/day3"
+            android:drawableBottom="@drawable/ic_giftcard"
+            app:layout_constraintTop_toBottomOf="@id/textGearBox"
+            app:layout_constraintLeft_toRightOf="@id/day1"/>
+        <TextView
+            android:id="@+id/day3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day 3"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:drawableBottom="@drawable/ic_giftcard"
+            app:layout_constraintRight_toLeftOf="@id/day7"
+            app:layout_constraintTop_toBottomOf="@id/textGearBox"
+            app:layout_constraintLeft_toRightOf="@id/day2"/>
+
+        <TextView
+            android:id="@+id/day4"
+            android:layout_width="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Day 4"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            app:layout_constraintRight_toLeftOf="@id/day5"
+            android:drawableBottom="@drawable/ic_giftcard"
+            app:layout_constraintTop_toBottomOf="@id/day1"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/day5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day 5"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            app:layout_constraintRight_toLeftOf="@id/day6"
+            android:drawableBottom="@drawable/ic_giftcard"
+            app:layout_constraintTop_toBottomOf="@id/day2"
+            app:layout_constraintLeft_toRightOf="@id/day4"/>
+
+        <TextView
+            android:id="@+id/day6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Day 6"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:drawableBottom="@drawable/ic_giftcard"
+            app:layout_constraintRight_toLeftOf="@id/day7"
+            app:layout_constraintTop_toBottomOf="@id/day3"
+            app:layout_constraintLeft_toRightOf="@id/day5"/>
+
+        <TextView
+            android:id="@+id/day7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+
+            android:text="Day 7"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:drawableBottom="@drawable/ic_giftcard"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+            android:id="@+id/btnClaim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Claim"
+            android:backgroundTint="#20D326"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/day4" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

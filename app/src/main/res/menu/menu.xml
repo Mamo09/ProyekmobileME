@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/beranda"
+        android:icon="@drawable/ic_dashboard"
+        android:title="Beranda"/>
+    <item
+        android:id="@+id/schedule"
+        android:icon="@drawable/ic_schedule"
+        android:title="Schedule"/>
+
+    <item
+        android:id="@+id/turnamen"
+        android:icon="@drawable/ic_games"
+        android:title="Turnamen"/>
+
+    <item
+        android:id="@+id/profil"
+        android:icon="@drawable/ic_person"
+        android:title="Profil"/>
+
+
+
+
+
+
+
+</menu>

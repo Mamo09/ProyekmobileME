@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="#161F28"
+    tools:context=".fragments.OverviewDetailTurnamenFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+
+    <TextView
+        android:id="@+id/textOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:scrollbars="vertical"
+        android:text="
+Schedule: \n
+🗓️ 10 - 12 Desember 2021.\n
+⏰ Pukul 21.00 WIB s.d. Selesai.\n\n
+
+Participant:\n
+✅ Khusus mahasiswa/i Mikroskil\n
+✅ 16 Slots\n
+✅ No multi slot\n\n
+
+Prize Pool:\n
+9000DM (tentative) + Random Elite Skin Box + E-Certificate.\n
+🥇 Juara 1 : 5000DM 💎 + Random Elite Skin Box + E-Certificate.\n
+🥈 Juara 2 : 2500DM 💎 + E-Certificate.\n
+🥉 Juara 3 : 1500DM 💎 + E-Certificate.\n\n
+
+Payment:\n
+REGIST 10K/TIM.\n
+1. GOPAY - 087794612742 (Herlyn Agnes Margaretha Sinaga).\n
+2. DANA - 087794612742 (Herlyn Agnes Margaretha Sinaga).\n\n
+
+Rules:\n
+- Dilarang menggunakan program illegal.\n
+- Dilarang menggunakan bug/glitch dengan sengaja.\n
+- Dilarang mendaftar lebih dari satu kali.\n
+- 1 tim terdiri dari 5 anggota.\n
+- CUSTOM CLASSIC sampai Semi Final (Wajib pick hero SELENA).\n
+- CUSTOM DRAFT PICK untuk Bronze dan Final Match (Hero bebas).\n
+- Waktu keterlambatan hanya 10 menit.\n
+Selengkapnya akan diberitahukan sewaktu Technical Meeting."
+        android:textColor="#fff"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBergabung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bergabung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOverview" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

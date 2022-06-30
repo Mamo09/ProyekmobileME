@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/join_turnamen_nav"
+    app:startDestination="@id/viewPagerJoinFragment">
+    <fragment
+        android:id="@+id/viewPagerJoinFragment"
+        android:name="com.example.tugasproyek.join_turnamen.ViewPagerJoinFragment"
+        android:label="fragment_view_pager_join"
+        tools:layout="@layout/fragment_view_pager_join" />
+</navigation>
