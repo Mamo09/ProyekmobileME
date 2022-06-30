@@ -47,18 +47,18 @@ class TimFragment : Fragment() {
         val view = binding.root
         val pilihTimItem = resources.getStringArray(R.array.pilihTim)
         val arrayAdapter = ArrayAdapter(requireContext(),R.layout.pilih_tim_dropdown_item,pilihTimItem)
-        binding.autoCompleteTextView.setAdapter(arrayAdapter)
-        binding.autoCompleteTextView.setBackgroundColor(Color.parseColor("#1B2835"))
+//        binding.autoCompleteTextView.setAdapter(arrayAdapter)
+//        binding.autoCompleteTextView.setBackgroundColor(Color.parseColor("#1B2835"))
 
         val viewPager = activity?.findViewById<ViewPager2>(R.id.joinTurnamenViewPager)
         binding.next.setOnClickListener {
             viewPager?.currentItem = 1
 
-            val sharedPreferences = requireActivity().getSharedPreferences("NotifSharedPrefs", Context.MODE_PRIVATE)
-            val editor = sharedPreferences.edit()
-            editor.apply {
-                putString("team",binding.autoCompleteTextView.text.toString())
-            }.apply()
+//            val sharedPreferences = requireActivity().getSharedPreferences("NotifSharedPrefs", Context.MODE_PRIVATE)
+//            val editor = sharedPreferences.edit()
+//            editor.apply {
+//               putString("team",binding.autoCompleteTextView.text.toString())
+//            }.apply()
 
         }
 

@@ -112,6 +112,23 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPilihTim" />
 
+    <EditText
+        app:layout_constraintTop_toBottomOf="@+id/textKetPilihTim"
+        android:id="@+id/inputPilihTim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edittext"
+        android:hint="Jawaban Anda"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:textColorHint="#99FFFFFF"
+        android:inputType="textPersonName"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="18dp"
+        android:textCursorDrawable="@drawable/cursor"
+        android:layout_marginRight="18dp"
+        tools:layout_editor_absoluteX="18dp" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/pilihTim"
         android:layout_width="match_parent"
@@ -125,26 +142,28 @@
         app:layout_constraintTop_toBottomOf="@+id/textKetPilihTim"
         >
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/black"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
 
-            <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="#1B2835"
-                android:inputType="none"
-                android:text="Pilih Tim"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#99FFFFFF"
-                android:textSize="15dp"
-                tools:ignore="TouchTargetSizeCheck" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@color/black"-->
+<!--            style="@style/Widget.AppCompat.Light.ListView.DropDown">-->
+
+<!--            <AutoCompleteTextView-->
+<!--                android:id="@+id/autoCompleteTextView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:backgroundTint="#1B2835"-->
+<!--                android:inputType="none"-->
+<!--                android:text="Pilih Tim"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textColorHint="#99FFFFFF"-->
+<!--                android:textSize="15dp"-->
+<!--                tools:ignore="TouchTargetSizeCheck" />-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
 
     </androidx.cardview.widget.CardView>
 
