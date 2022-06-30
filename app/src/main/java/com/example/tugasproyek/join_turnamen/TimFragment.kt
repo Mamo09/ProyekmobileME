@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.example.tugasproyek.R
+import com.example.tugasproyek.R.layout.fragment_tim
 import kotlinx.android.synthetic.main.fragment_tim.view.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -39,7 +40,7 @@ class TimFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_tim, container, false)
+        val view =  inflater.inflate(fragment_tim, container, false)
         val pilihTimItem = resources.getStringArray(R.array.pilihTim)
         val arrayAdapter = ArrayAdapter(requireContext(),R.layout.pilih_tim_dropdown_item,pilihTimItem)
         view.autoCompleteTextView.setAdapter(arrayAdapter)
