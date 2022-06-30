@@ -136,12 +136,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="#1B2835"
                 android:inputType="none"
                 android:text="Pilih Tim"
                 android:textColor="#FFFFFF"
-                android:textSize="15dp"
                 android:textColorHint="#99FFFFFF"
-                android:backgroundTint="#1B2835"/>
+                android:textSize="15dp"
+                tools:ignore="TouchTargetSizeCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -158,6 +159,7 @@
         android:textColor="#206AB5"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
