@@ -89,9 +89,9 @@ class ProfilFragment : Fragment() {
             intentCamera()
         }
 
-        createTeam.setOnClickListener {
-            startActivity(Intent(activity, NamaPemain::class.java))
-        }
+        //createTeam.setOnClickListener {
+           // startActivity(Intent(activity, NamaPemain::class.java))
+        //}
 
         btnLogout.setOnClickListener {
             btnLogout()
