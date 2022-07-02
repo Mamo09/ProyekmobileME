@@ -10,10 +10,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import android.widget.Toast
 import com.example.tugasproyek.*
-import com.example.tugasproyek.databinding.FragmentProfilBinding
 import com.example.tugasproyek.dataclass.Pengguna
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
@@ -130,8 +128,8 @@ class ProfilFragment : Fragment() {
             intentCamera()
         }
 
-        btnDetail.setOnClickListener {
-           startActivity(Intent(activity,Detail::class.java))
+        textDetail.setOnClickListener {
+           startActivity(Intent(activity,NamaPemain::class.java))
         }
 
         btnLogout.setOnClickListener {

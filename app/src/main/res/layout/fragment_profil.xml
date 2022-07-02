@@ -170,11 +170,11 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/btnDetail"
+                android:id="@+id/textDetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sora"
-                android:text="Detail Lainnya"
+                android:text="Create Team"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold"
