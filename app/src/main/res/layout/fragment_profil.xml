@@ -32,30 +32,165 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/fotoProfil"
+<!--            <TextView-->
+<!--                android:id="@+id/textView6"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/sora"-->
+<!--                android:text="Profile"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="24dp"-->
+<!--                android:textStyle="bold" -->
+<!--                android:padding="10dp"/>-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:src="@drawable/ic_camera" />
+                android:layout_height="220dp">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="380dp"
+                    android:layout_height="151dp"
+                    android:background="@drawable/border"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/icon1"
+                    app:layout_constraintBottom_toTopOf="@+id/fotoProfil"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fotoProfil"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="-38dp"
+                    android:src="@drawable/ic_camera"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                    app:layout_constraintHorizontal_bias="0.494"
+                    app:layout_constraintStart_toStartOf="@+id/imageView3"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginVertical="16dp"
+                android:background="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:ems="10"
+                    android:fontFamily="@font/sora"
+                    android:hint="Masukkan Nama"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:fontFamily="@font/sora"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/etName"
+                    app:layout_constraintStart_toStartOf="@+id/etName"
+                    app:layout_constraintTop_toBottomOf="@+id/etName"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:fontFamily="@font/sora"
+                    android:inputType="phone"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/etName"
+                    app:layout_constraintStart_toStartOf="@+id/etEmail"
+                    app:layout_constraintTop_toBottomOf="@+id/etEmail"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageView
+                    android:id="@+id/icVeri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_veri"
+                    app:layout_constraintBottom_toBottomOf="@+id/etEmail"
+                    app:layout_constraintEnd_toEndOf="@+id/etName"
+                    app:layout_constraintStart_toEndOf="@+id/etEmail"
+                    app:layout_constraintTop_toTopOf="@+id/etEmail" />
+
+                <ImageView
+                    android:id="@+id/icUnveri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_noveri"
+                    app:layout_constraintBottom_toBottomOf="@+id/etEmail"
+                    app:layout_constraintEnd_toEndOf="@+id/etName"
+                    app:layout_constraintStart_toEndOf="@+id/etEmail"
+                    app:layout_constraintTop_toTopOf="@+id/etEmail" />
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/colorButton"
+                    android:fontFamily="@font/sora"
+                    android:text="Save"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etPhone"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
+                android:id="@+id/btnDetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Soeharto"
-                android:textColor="#fff"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
+                android:fontFamily="@font/sora"
+                android:text="Detail Lainnya"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"
+                android:background="@color/colorAccent"
+                android:height="35dp"/>
 
             <TextView
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:fontFamily="@font/sora"
                 android:text="Logout"
+                android:height="35dp"
                 android:textColor="#fff"
                 android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:background="@color/colorAccent"/>
 
         </LinearLayout>
 
