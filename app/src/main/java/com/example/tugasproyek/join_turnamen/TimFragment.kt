@@ -1,5 +1,6 @@
 package com.example.tugasproyek.join_turnamen
 
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,8 +10,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.example.tugasproyek.R
-import com.example.tugasproyek.R.layout.fragment_tim
-import kotlinx.android.synthetic.main.fragment_tim.view.*
+import com.example.tugasproyek.databinding.FragmentTimBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,9 +23,12 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class TimFragment : Fragment() {
+    private lateinit var _binding: FragmentTimBinding
+    private val binding get() = _binding
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,16 +43,28 @@ class TimFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(fragment_tim, container, false)
+        _binding =  FragmentTimBinding.inflate(inflater, container, false)
+        val view = binding.root
         val pilihTimItem = resources.getStringArray(R.array.pilihTim)
         val arrayAdapter = ArrayAdapter(requireContext(),R.layout.pilih_tim_dropdown_item,pilihTimItem)
-        view.autoCompleteTextView.setAdapter(arrayAdapter)
-        view.autoCompleteTextView.setBackgroundColor(Color.parseColor("#1B2835"))
+//        binding.autoCompleteTextView.setAdapter(arrayAdapter)
+//        binding.autoCompleteTextView.setBackgroundColor(Color.parseColor("#1B2835"))
 
         val viewPager = activity?.findViewById<ViewPager2>(R.id.joinTurnamenViewPager)
-        view.next.setOnClickListener {
+        binding.next.setOnClickListener {
             viewPager?.currentItem = 1
+
+//            val sharedPreferences = requireActivity().getSharedPreferences("NotifSharedPrefs", Context.MODE_PRIVATE)
+//            val editor = sharedPreferences.edit()
+//            editor.apply {
+//               putString("team",binding.autoCompleteTextView.text.toString())
+//            }.apply()
+
         }
+
+
+
+
 
 
         return view

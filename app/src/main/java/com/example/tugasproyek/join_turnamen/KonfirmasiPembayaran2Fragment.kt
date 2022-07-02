@@ -7,9 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.example.tugasproyek.R
-import kotlinx.android.synthetic.main.fragment_konfirmasi_pembayaran1.view.*
-import kotlinx.android.synthetic.main.fragment_konfirmasi_pembayaran1.view.movePembayaran1
-import kotlinx.android.synthetic.main.fragment_konfirmasi_pembayaran2.view.*
+import com.example.tugasproyek.databinding.FragmentKonfirmasiPembayaran1Binding
+import com.example.tugasproyek.databinding.FragmentKonfirmasiPembayaran2Binding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,9 +21,13 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class KonfirmasiPembayaran2Fragment : Fragment() {
+    private lateinit var _binding: FragmentKonfirmasiPembayaran2Binding
+    private val binding get() = _binding
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,11 +42,15 @@ class KonfirmasiPembayaran2Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_konfirmasi_pembayaran2, container, false)
+        _binding =  FragmentKonfirmasiPembayaran2Binding.inflate(inflater, container, false)
+        val view = binding.root
         val viewPager = activity?.findViewById<ViewPager2>(R.id.konfirmasiPembayaranViewPager)
-        view.movePembayaran1.setOnClickListener {
+        binding.movePembayaran1.setOnClickListener {
             viewPager?.currentItem = 0
+
         }
+
+
         return  view
     }
 
@@ -66,4 +73,5 @@ class KonfirmasiPembayaran2Fragment : Fragment() {
                 }
             }
     }
+
 }

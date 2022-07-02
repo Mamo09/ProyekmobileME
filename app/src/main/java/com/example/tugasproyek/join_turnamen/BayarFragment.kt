@@ -1,5 +1,6 @@
 package com.example.tugasproyek.join_turnamen
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,9 +9,7 @@ import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.example.tugasproyek.R
 import com.example.tugasproyek.create_team.pemain.*
-import kotlinx.android.synthetic.main.fragment_bayar.view.*
-import kotlinx.android.synthetic.main.fragment_nama_pemain.view.*
-import kotlinx.android.synthetic.main.fragment_bayar.view.previous as previous1
+import com.example.tugasproyek.databinding.FragmentBayarBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,6 +22,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class BayarFragment : Fragment() {
+    private lateinit var _binding: FragmentBayarBinding
+    private val binding get() = _binding
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -40,20 +41,23 @@ class BayarFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_bayar, container, false)
+        _binding =  FragmentBayarBinding.inflate(inflater, container, false)
+        val view = binding.root
         val fragmentList = arrayListOf<Fragment>(
             KonfirmasiPembayaran1Fragment(),
             KonfirmasiPembayaran2Fragment(),
         )
         val adapter = KonfirmasiPembayaranViewPagerAdapter(fragmentList,requireActivity().supportFragmentManager,lifecycle)
-        view.konfirmasiPembayaranViewPager.adapter = adapter
+        binding.konfirmasiPembayaranViewPager.adapter = adapter
 
         val viewPager = activity?.findViewById<ViewPager2>(R.id.joinTurnamenViewPager)
-        view.previous.setOnClickListener {
+        binding.previous.setOnClickListener {
             viewPager?.currentItem = 0
         }
-        view.next.setOnClickListener {
+        binding.next.setOnClickListener {
             viewPager?.currentItem = 2
+
+
         }
         return view
     }
