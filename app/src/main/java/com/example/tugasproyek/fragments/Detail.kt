@@ -66,6 +66,7 @@ class Detail : Fragment() {
 
         createTeam.setOnClickListener {
              startActivity(Intent(activity, NamaPemain::class.java))
-            }
+        }
+
     }
 }

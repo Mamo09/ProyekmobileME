@@ -10,11 +10,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.Toast
 import com.example.tugasproyek.*
 import com.example.tugasproyek.databinding.FragmentProfilBinding
+import com.example.tugasproyek.dataclass.Pengguna
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_profil.*
@@ -34,12 +37,14 @@ private const val ARG_PARAM2 = "param2"
 class ProfilFragment : Fragment() {
 
 
+
     private lateinit var firebaseAuth: FirebaseAuth
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
     private lateinit var imageUri : Uri
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +54,7 @@ class ProfilFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
 
 
 
@@ -103,6 +109,7 @@ class ProfilFragment : Fragment() {
 
             etName.setText(user.displayName)
             etEmail.setText(user.email)
+            etPhone.setText(user.phoneNumber)
 
             if (user.isEmailVerified){
                 icVeri.visibility = View.VISIBLE
@@ -111,11 +118,11 @@ class ProfilFragment : Fragment() {
                 icUnveri.visibility = View.VISIBLE
             }
 
-            if (user.phoneNumber.isNullOrEmpty()){
-                etPhone.setText("Masukkan Nomor Telepon")
-            }else{
-                etPhone.setText(user.phoneNumber )
-            }
+//            if (user.phoneNumber.isNullOrEmpty()){
+//                etPhone.setText("")
+//            }else{
+//                etPhone.setText(user.phoneNumber )
+//            }
 
         }
 
@@ -124,18 +131,20 @@ class ProfilFragment : Fragment() {
         }
 
         btnDetail.setOnClickListener {
-           startActivity(Intent(activity, NamaPemain::class.java))
+           startActivity(Intent(activity,Detail::class.java))
         }
 
         btnLogout.setOnClickListener {
             btnLogout()
         }
+
         btnSave.setOnClickListener{
             val image = when{
                 ::imageUri.isInitialized -> imageUri
                 user?.photoUrl == null -> Uri.parse("https://picsum.photos/id/237/200/300")
                 else -> user.photoUrl
             }
+
             val name = etName.text.toString().trim()
 
             if(name.isEmpty()){
@@ -143,6 +152,28 @@ class ProfilFragment : Fragment() {
                 etName.requestFocus()
                 return@setOnClickListener
             }
+
+            val phone = etPhone.text.toString().trim()
+
+            if(phone.isEmpty()){
+                etPhone.error = "Nomor telepon Harus Diisi"
+                etPhone.requestFocus()
+                return@setOnClickListener
+            }
+            //val ref = FirebaseDatabase.getInstance().getReference("${FirebaseAuth.getInstance().currentUser?.email}")
+
+            val ref = FirebaseDatabase.getInstance().getReference("Pengguna")
+            val pngId = ref.push().key
+            val png = Pengguna(pngId, name, phone)
+
+            if( pngId != null){
+                ref.child(pngId).setValue(png).addOnCompleteListener{
+                    Toast.makeText(activity,"Data berhasil ditambahkan", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+
+
             UserProfileChangeRequest.Builder()
                 .setDisplayName(name)
                 .setPhotoUri(image)
@@ -156,6 +187,16 @@ class ProfilFragment : Fragment() {
                         }
                     }
                 }
+        }
+
+        icUnveri.setOnClickListener{
+            user?.sendEmailVerification()?.addOnCompleteListener{
+                if (it.isSuccessful){
+                    Toast.makeText(activity, "Email verifikasi telah dikirim",Toast.LENGTH_SHORT).show()
+                }else {
+                    Toast.makeText(activity, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
 
         
